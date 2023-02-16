@@ -95,16 +95,6 @@ input[type="submit"]:hover, button:hover {
             header ('Location:Tnx.php');
         }
 
-
-
-
-
-
-
-
-
-
-?>
-    
+?>  
     </body>
 </html>
