@@ -23,11 +23,11 @@
             <div class="m-5 bg-secondary p-3 rounded-3 text-white   ">
             <h1 class="text-center">Login</h1>
 
-            <form action="../Dashbord/acceuil.php" method="post">
+            <form action="" method="post">
                 <label for="User"> User Login : </label>
-                <input type="text" class="form-control mb-2" style="width: 300px;" name="username" placeholder="Username"/>
+                <input type="text" class="form-control mb-2" style="width: 300px;" name="username" placeholder="Username" />
                 <label for="password">Password : </label>
-                <input type="Password" class="form-control"name="psw" style="width: 300px;" placeholder="Password"/>
+                <input type="password" class="form-control" name="pwd" style="width: 300px;" placeholder="Password" required/>
                 <br>
                 <input type="submit" class="btn btn-primary" value="login" name="submit">
             </form>
@@ -40,9 +40,23 @@
         
 
     <?php
-        include "../Traitement/logincheck.php";
-    ?>
-        
+       
+       $User = $_POST["username"] ;
+       $password = $_POST["pwd"] ;
+
+       if(!empty($_POST["submit"])) {
+       
+        if($User == "ybenmans" && $password === "01234"){
+            header("Location:../Dashbord/profil.php?users=$User&pwd=$password");
+        }
+
+        else{
+            echo "<h1>Error user not found !</h1>" ;
+        }
+
+    }
+            
+?>
 
 </body>
 </html>
