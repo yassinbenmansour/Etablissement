@@ -11,11 +11,9 @@
     <div class="bg-secondary p-1 m-2">
         <ul class="nav justify-content-end ">
             <li class="nav-item">
-            <a class="nav-link text-white" href="./connexion/Signin.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Login</a>
+            <a class="nav-link text-white" href="./Signin.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Login</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link text-white" href="./connexion/signup.php"><img src="./assets/signup.png" style="width: 20px;" alt="logo"> Sign up</a>
-            </li>
+            
         </ul>
     </div>
 

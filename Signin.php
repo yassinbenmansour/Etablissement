@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+include "./traitement/function.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,13 +11,6 @@
 </head>
 <body>
 
-    <div class="bg-secondary p-1 m-2">
-        <ul class="nav justify-content-end ">
-            <li class="nav-item">
-            <a class="nav-link text-white" href="./signup.php"><img src="../assets/signup.png" style="width: 20px;" alt="logo"> Sign up</a>
-            </li>
-        </ul>
-    </div>
 
         <div class="row">
             <div class="col-4"></div>
@@ -23,13 +18,14 @@
             <div class="m-5 bg-secondary p-3 rounded-3 text-white   ">
             <h1 class="text-center">Login</h1>
 
-            <form action="" method="post">
+            <form action="./Signin.php" method="post">
                 <label for="User"> User Login : </label>
                 <input type="text" class="form-control mb-2" style="width: 300px;" name="username" placeholder="Username" />
                 <label for="password">Password : </label>
-                <input type="password" class="form-control" name="pwd" style="width: 300px;" placeholder="Password" required/>
+                <input type="password" class="form-control" name="pwd" style="width: 300px;" placeholder="Password" />
                 <br>
-                <input type="submit" class="btn btn-primary" value="login" name="submit">
+                <input type="submit" class="btn btn-primary" value="Validation" name="submit">
+                <input type="reset" class="btn btn-danger" value="Annuler" name="Annuler">
             </form>
 
         </div> 
@@ -45,16 +41,8 @@
        $password = $_POST["pwd"] ;
 
        if(!empty($_POST["submit"])) {
-       
-        if($User == "ybenmans" && $password === "01234"){
-            header("Location:../Dashbord/profil.php?users=$User&pwd=$password");
+         checklogin($User,$password);
         }
-
-        else{
-            echo "<h1>Error user not found !</h1>" ;
-        }
-
-    }
             
 ?>
 
