@@ -19,9 +19,12 @@ include "./traitement/function.php";
             <li class="nav-item">
             <a class="nav-link text-white" href="./upload.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Upload</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link text-white" href="./List.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> List</a>
+            </li>
             
             <li class="nav-item">
-            <a class="nav-link text-white" href="./" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Search</a>
+            <a class="nav-link text-white" href="./search.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Search</a>
             </li>
         </ul>
     </div>
