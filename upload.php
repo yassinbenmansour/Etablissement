@@ -1,3 +1,7 @@
+<?php
+include "./traitement/function.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +51,18 @@
     <?php
 
         if(!empty($_POST["Enregistre"])){
-            echo "test save" ;
+
+            $user = $_POST["username"] ;
+            $mail = $_POST["mail"] ;
+            $ville = $_POST["ville"] ;
+
+            $fileNm = $_FILES['pic']['name'];
+            $filetmp = $_FILES['pic']['tmp_name'] ;
+            $dest = "img/$fileNm" ;
+
+
+            enregistre($user , $mail, $ville , $filetmp , $dest);
+
         }
     
     ?>
