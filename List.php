@@ -28,6 +28,17 @@ include "./traitement/function.php";
         </ul>
     </div>
 
+        <h1 class="text-center"><a class="btn btn-secondary " href="list.php?cle=show">Afficher la list</a></h1>
+
+    <?php
+
+    if(!empty($_GET["cle"])){
+        show();
+    }
+
+
+
+?>
 
     
 

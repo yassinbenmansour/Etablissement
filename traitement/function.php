@@ -34,4 +34,65 @@
 
         move_uploaded_file($filetmp , $dest );
     }
+
+    //function file read
+
+    function show(){
+
+?>
+
+<table class="table table-bordered container">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>ville</th>
+        <th>photo</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+
+
+
+<?php
+
+
+
+
+        // read file student
+        $fs = fopen("student.txt","r");
+        $cpt = 1;
+        // Output one line until end-of-file
+        while(!feof($fs)) {
+            $enrg = fgets($fs);
+            if($enrg != ""){
+                $tab = explode("-", $enrg);
+
+                echo " <tr> ";
+                    echo "<td>$tab[0]</td>";
+                    echo "<td>$tab[1]</td>";
+                    echo "<td>$tab[2]</td>";
+                    echo "<td><img src='$tab[3]' witdh='60px' height='60px'</td>";
+
+                    
+                echo "</tr>";
+                
+                echo "<br>";
+
+                $cpt++;
+            }
+        }
+
+        fclose($fs);
+
+
+        ?>
+
+</tbody>
+  </table>
+</div>
+
+        <?php
+    } 
 ?>

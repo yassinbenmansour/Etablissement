@@ -30,8 +30,11 @@ include "./traitement/function.php";
     </div>
 
 
-    <div class="container pt-5">
-        <div class="p-2">
+
+
+    <div>
+      <div class="row align-items-center" >
+        <div class="mx-auto col-10 col-md-8 col-lg-4">
             <form action="./upload.php" method="post" enctype="multipart/form-data">
                 <label for="User"> Username: </label>
                 <input type="text" class="form-control mb-2" style="width: 300px;" name="username" placeholder="Username" />
@@ -47,7 +50,9 @@ include "./traitement/function.php";
                 <input type="reset" class="btn btn-danger" value="Annuler" name="Annuler">
             </form>
         </div>
+     </div>
     </div>
+
 
 
 
