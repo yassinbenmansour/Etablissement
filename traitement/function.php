@@ -53,12 +53,7 @@
     <tbody>
       
 
-
-
 <?php
-
-
-
 
         // read file student
         $fs = fopen("student.txt","r");
@@ -85,13 +80,9 @@
         }
 
         fclose($fs);
-
-
         ?>
-
 </tbody>
   </table>
-</div>
 
         <?php
     } 
