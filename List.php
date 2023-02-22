@@ -6,6 +6,8 @@ session_start();
         header("Location:./Signin.php");
     }
 
+    
+
     $Userlogin = $_SESSION["clelogin"] ;
 ?>
 
@@ -21,7 +23,7 @@ session_start();
 </head>
 <body>
 
-    <div class="bg-secondary p-1 m-2">
+<div class="bg-secondary p-1 m-2">
         <ul class="nav justify-content-end ">
             <li class="nav-item">
             <a class="nav-link text-white" href="./upload.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Upload</a>
@@ -29,8 +31,12 @@ session_start();
             <li class="nav-item">
             <a class="nav-link text-white" href="./List.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> List</a>
             </li>
+            
             <li class="nav-item">
             <a class="nav-link text-white" href="./search.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Search</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-white" href="./logout.php" >Log out</a>
             </li>
         </ul>
     </div>

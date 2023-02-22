@@ -8,10 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    
     <div class="bg-secondary p-1 m-2">
         <ul class="nav justify-content-end ">
-            <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link text-white" href="./Signin.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Login</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-white" href="./upload.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Upload</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-white" href="./List.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> List</a>
+            </li>
+            
+            <li class="nav-item">
+            <a class="nav-link text-white" href="./search.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Search</a>
             </li>
             
         </ul>

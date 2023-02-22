@@ -7,7 +7,7 @@ include "./traitement/function.php";
     if(empty($_SESSION["clelogin"])){
         header("Location:./Signin.php");
     }
-
+    
     $Userlogin = $_SESSION["clelogin"] ;
 ?>
 
@@ -34,6 +34,9 @@ include "./traitement/function.php";
             
             <li class="nav-item">
             <a class="nav-link text-white" href="./search.php" > <img src="./assets/login.png" style="width: 20px;" alt="logo"> Search</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-white" href="./logout.php" >Log out</a>
             </li>
         </ul>
     </div>
