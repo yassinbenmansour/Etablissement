@@ -33,6 +33,7 @@
         //upload photo 
 
         move_uploaded_file($filetmp , $dest );
+        echo "<h1 style='color:green;text-align:center; margin-top:20px;'> upload successfely </h1>" ;
     }
 
     //function file read
@@ -81,9 +82,65 @@
 
         fclose($fs);
         ?>
-</tbody>
-  </table>
+    </tbody>
+    </table>
 
         <?php
     } 
+
+
+    function recherche ($ville){
+
+       /* 
+        //read file student line bu line 
+        $fs = fopen("student.txt","r");
+        $cpt = 1;
+        
+
+
+        //algo find test
+        while(!feof($fs)){
+
+            $search = fgets($fs);
+
+            if($search != ""){
+                $tab = explode("-", $search);
+                        echo "name : $tab[0] --- mail: $tab[1] --- ville : $tab[2] --- picture : $tab[3]";
+                        echo "<br>";
+                $cpt++;
+            }
+
+        }
+        fclose($fs);
+*/
+
+        //script 2
+
+        $search = $ville;
+        $lines = file('student.txt');
+        // Store true when the text is found
+        $found = false;
+        foreach($lines as $line)
+        {
+        if(strpos($line, $search) !== false)
+        {
+            $found = true;
+            echo $line;
+            echo "<br>";
+        }
+        }
+        // If the text was not found, show a message
+        if(!$found)
+        {
+        echo 'No match found';
+        }
+
+    }
+
+
+
+
+
+
+
 ?>

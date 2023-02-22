@@ -29,6 +29,36 @@ include "./traitement/function.php";
     </div>
 
 
+
+
+
+    <div class="row">
+        <div class="col-4"></div>
+            <div class="col-4">
+                <div class="m-5 bg-secondary p-3 rounded-3 text-white   ">
+                     <form action="./search.php" method="post">
+                         <label>Recherche par ville :</label>
+                         <input class="form-control mb-2" style="width: 300px;" type="text" name="ville" placeholder="Ville..">
+                         <input class="btn btn-primary" type="submit" value="Rechercher" name="submit">
+                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <?php   
+
+       
+        $ville = $_POST["ville"];
+
+        if(!empty($_POST["submit"])) {
+            recherche($ville);
+        }
+    ?>
+
+
     
 
 

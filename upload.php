@@ -37,13 +37,13 @@ include "./traitement/function.php";
         <div class="mx-auto col-10 col-md-8 col-lg-4">
             <form action="./upload.php" method="post" enctype="multipart/form-data">
                 <label for="User"> Username: </label>
-                <input type="text" class="form-control mb-2" style="width: 300px;" name="username" placeholder="Username" />
+                <input type="text" class="form-control mb-2" style="width: 300px;" name="username" placeholder="Username" required/>
                 <label for="gmail"> gmail: </label>
-                <input type="email" class="form-control mb-2" style="width: 300px;" name="mail" placeholder="Email" />
+                <input type="email" class="form-control mb-2" style="width: 300px;" name="mail" placeholder="Email" required />
                 <label for="ville"> ville: </label>
-                <input type="text" class="form-control mb-2" style="width: 300px;" name="ville" placeholder="Ville" />
+                <input type="text" class="form-control mb-2" style="width: 300px;" name="ville" placeholder="Ville" required />
                 <label for="pic"> photo: </label>
-                <input type="file" class="form-control mb-2" style="width: 300px;" name="pic" placeholder="upload file" />
+                <input type="file" class="form-control mb-2" style="width: 300px;" name="pic" placeholder="upload file" required/>
                 
                 <br>
                 <input type="submit" class="btn btn-primary" value="Enregistre" name="Enregistre">
@@ -70,6 +70,7 @@ include "./traitement/function.php";
 
 
             enregistre($user , $mail, $ville , $filetmp , $dest);
+
 
         }
     

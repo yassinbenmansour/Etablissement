@@ -41,7 +41,7 @@ include "./traitement/function.php";
        $password = $_POST["pwd"] ;
 
        if(!empty($_POST["submit"])) {
-         checklogin($User,$password);
+         checklogin($User,$passwod);
         }
             
 ?>
