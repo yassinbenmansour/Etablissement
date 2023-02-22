@@ -40,8 +40,10 @@ include "./traitement/function.php";
        $User = $_POST["username"] ;
        $password = $_POST["pwd"] ;
 
+
+
        if(!empty($_POST["submit"])) {
-         checklogin($User,$passwod);
+        checklogin($User,$password);
         }
             
 ?>

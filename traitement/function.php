@@ -1,7 +1,7 @@
 <?php
 //function signup
     function checklogin($User,$password){
-        if($User == "ybenmans" && $password === "01234"){
+        if($User == "yassine" && $password === "0123"){
             header("Location:./upload.php");
         }
         else{
@@ -90,31 +90,6 @@
 
 
     function recherche ($ville){
-
-       /* 
-        //read file student line bu line 
-        $fs = fopen("student.txt","r");
-        $cpt = 1;
-        
-
-
-        //algo find test
-        while(!feof($fs)){
-
-            $search = fgets($fs);
-
-            if($search != ""){
-                $tab = explode("-", $search);
-                        echo "name : $tab[0] --- mail: $tab[1] --- ville : $tab[2] --- picture : $tab[3]";
-                        echo "<br>";
-                $cpt++;
-            }
-
-        }
-        fclose($fs);
-*/
-
-        //script 2
 
         $search = $ville;
         $lines = file('student.txt');
