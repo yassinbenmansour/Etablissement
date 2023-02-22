@@ -1,5 +1,5 @@
 #!/bin/sh
 
 git add .
-git commit -m "push using script"
+git commit -m "update add session"
 git push

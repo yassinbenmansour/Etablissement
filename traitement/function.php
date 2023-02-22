@@ -2,6 +2,13 @@
 //function signup
     function checklogin($User,$password){
         if($User == "yassine" && $password === "0123"){
+            //start session 
+
+            session_start();
+            //stocker login dans la session
+
+            $_SESSION["clelogin"] = $User ;
+            
             header("Location:./upload.php");
         }
         else{

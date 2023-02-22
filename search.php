@@ -1,5 +1,12 @@
 <?php
 include "./traitement/function.php";
+session_start();
+
+    if(empty($_SESSION["clelogin"])){
+        header("Location:./Signin.php");
+    }
+
+    $Userlogin = $_SESSION["clelogin"] ;
 ?>
 
 <!DOCTYPE html>
