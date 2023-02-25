@@ -23,9 +23,11 @@ include "./traitement/function.php";
                 <input type="text" class="form-control mb-2" style="width: 300px;" name="username" placeholder="Username" />
                 <label for="password">Password : </label>
                 <input type="password" class="form-control" name="pwd" style="width: 300px;" placeholder="Password" />
+        
+                <input type="checkbox" class="mt-<3" name="rmb"> Remember me 
                 <br>
-                <input type="submit" class="btn btn-primary" value="Validation" name="submit">
-                <input type="reset" class="btn btn-danger" value="Annuler" name="Annuler">
+                <input type="submit" class="btn btn-primary mt-3" value="Validation" name="submit">
+                <input type="reset" class="btn btn-danger mt-3" value="Annuler" name="Annuler">
             </form>
 
         </div> 
@@ -39,11 +41,11 @@ include "./traitement/function.php";
        
        $User = $_POST["username"] ;
        $password = $_POST["pwd"] ;
-
+       $rmb = $_POST["rmb"];
 
 
        if(!empty($_POST["submit"])) {
-        checklogin($User,$password);
+            checklogin($User,$password,$rmb);
         }
             
 ?>

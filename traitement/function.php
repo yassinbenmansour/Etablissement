@@ -1,15 +1,21 @@
 <?php
 //function signup
-    function checklogin($User,$password){
-        if($User == "yassine" && $password === "0123"){
-            //start session 
+    function checklogin($User,$password,$rmb){
 
+        if($User == "yassine" && $password === "0123" && empty($rmb)){
             session_start();
-            //stocker login dans la session
-
-            $_SESSION["clelogin"] = $User ;
-            
+            $_SESSION["clelogin"] = $User;
             header("Location:./upload.php");
+        }
+        if($User == "yassine" && $password === "0123" && !empty($rmb)){
+            session_start();
+            $_SESSION["clelogin"] = $User;
+
+            setcookie("username" , $User , time()+30);
+            setcookie("pwd" , $password , time()+30);
+
+            header("Location:./upload.php");
+            
         }
         else{
             echo "<h1 style='color:red; text-align:center;'>Error user not found !</h1>" ;
